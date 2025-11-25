@@ -1,2 +1,11 @@
 module ApplicationHelper
+  #ページごとの完全なタイトルを返す
+  def full_title(page_title = '')     #メソッド定義とオプション引数
+    base_title = "Ruby on Rails Tutorial Sample App"    
+    if page_title.empty?
+      base_title      #暗黙の戻り値
+    else
+      "#{page_title} | #{base_title}"   #文字列の式展開
+    end
+  end
 end
